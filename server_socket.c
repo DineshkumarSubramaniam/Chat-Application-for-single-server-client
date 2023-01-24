@@ -30,17 +30,16 @@ void func(int connfd)
 		read(connfd, buff, sizeof(buff));
 		
 		
-		//condition to convert the lower case to upper case
-		/*
+		//condition to convert the lower case to upper cases received from client
 		int i=0;
-		if (buff[i] >= 'a' && buff[i] <= 'z')
-		{
 		for(i=0;buff[i]!='\0';i++)
 		{
-			buff[i]+=32;
+		if (buff[i] >= 'a' && buff[i] <= 'z')
+		{
+			buff[i]-=32;
 		}
 		}
-		*/
+	
 		
 		// print buffer which contains the client contents
 		printf("From client: %s\t To client : ", buff);
